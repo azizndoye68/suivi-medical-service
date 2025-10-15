@@ -13,6 +13,8 @@ public class SuiviResponse {
 
     private Long id;
 
+    private Long utilisateurId;
+
     private Long patientId; // Référence vers le patient concerné
 
     private Double glycemie;           // Taux de glycémie (g/l)
