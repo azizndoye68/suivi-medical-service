@@ -81,9 +81,9 @@ public class SuiviServiceImpl implements SuiviService {
         existingSuivi.setGlycemie(suiviRequest.getGlycemie());
         existingSuivi.setMoment(suiviRequest.getMoment());
         existingSuivi.setRepas(suiviRequest.getRepas());
-        existingSuivi.setInsuline(suiviRequest.getInsuline());
-        existingSuivi.setActivite(suiviRequest.getActivite());
-        existingSuivi.setSymptome(suiviRequest.getSymptome());
+       // existingSuivi.setInsuline(suiviRequest.getInsuline());
+       // existingSuivi.setActivite(suiviRequest.getActivite());
+       // existingSuivi.setSymptome(suiviRequest.getSymptome());
 
         Suivi updatedSuivi = suiviRepository.save(existingSuivi);
         return suiviMapper.toSuiviResponse(updatedSuivi);
