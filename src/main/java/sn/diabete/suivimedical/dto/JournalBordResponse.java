@@ -13,7 +13,6 @@ public class JournalBordResponse {
 
     private Long id;
 
-    private Long utilisateurId;
     private Long patientId;
 
     private String repas;

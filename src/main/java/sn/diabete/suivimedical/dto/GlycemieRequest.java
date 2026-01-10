@@ -16,15 +16,5 @@ public class GlycemieRequest {
 
     private String repas;              // Type de repas (petit_dejeuner, dejeuner, etc.)
 
-    //private String insuline;           // Type d’insuline (rapide, lente, etc.)
-
-    //private String activite;           // Activité physique (légère, modérée, etc.)
-
-    //private String symptome;           // Symptômes (hypoglycémie, vertige, etc.)
-
-   // private String evenement;          // Événement de santé (stress, maladie, etc.)
-
-   // private Double poids;              // Poids (Kg)
-
 }
 

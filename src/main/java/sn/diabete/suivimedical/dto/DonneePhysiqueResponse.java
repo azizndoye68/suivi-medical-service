@@ -13,7 +13,6 @@ public class DonneePhysiqueResponse {
 
     private Long id;
 
-    private Long utilisateurId;
     private Long patientId;
 
     private Double poids;

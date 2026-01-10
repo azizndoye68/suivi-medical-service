@@ -18,17 +18,15 @@ public class JournalBord {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long utilisateurId;
-
     private Long patientId; // Référence vers le patient concerné
 
     private String repas;               // Description du repas
 
-    private String activitePhysique;    // Activité physique
+    private String activitePhysique;    // Activité physique (légère, modérée, etc.)
 
-    private String symptomes;           // Symptômes ressentis
+    private String symptomes;           // Symptômes (hypoglycémie, vertige, etc.)
 
-    private String evenements;          // Événements de santé (stress, maladie…)
+    private String evenements;          // Événement de santé (stress, maladie, etc.)
 
     private LocalDateTime dateSuivi;     // Date et heure d’enregistrement
 

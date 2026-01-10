@@ -5,7 +5,6 @@ import lombok.Data;
 @Data
 public class DonneePhysiqueRequest {
 
-    private Long utilisateurId;
     private Long patientId;
 
     private Double poids;

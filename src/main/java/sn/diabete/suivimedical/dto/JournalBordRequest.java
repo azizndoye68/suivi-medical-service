@@ -5,7 +5,6 @@ import lombok.Data;
 @Data
 public class JournalBordRequest {
 
-    private Long utilisateurId;
     private Long patientId;
 
     private String repas;

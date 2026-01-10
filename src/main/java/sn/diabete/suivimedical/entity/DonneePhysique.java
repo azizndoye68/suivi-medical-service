@@ -18,8 +18,6 @@ public class DonneePhysique {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long utilisateurId;
-
     private Long patientId; // Référence vers le patient concerné
 
     private Double poids;           // Poids en Kg
