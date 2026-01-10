@@ -1,17 +1,10 @@
 package sn.diabete.suivimedical.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
+import lombok.Data;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class SuiviResponse {
-
-    private Long id;
+public class GlycemieRequest {
 
     private Long utilisateurId;
 
@@ -29,9 +22,9 @@ public class SuiviResponse {
 
     //private String symptome;           // Symptômes (hypoglycémie, vertige, etc.)
 
-    //private String evenement;          // Événement de santé (stress, maladie, etc.)
+   // private String evenement;          // Événement de santé (stress, maladie, etc.)
 
    // private Double poids;              // Poids (Kg)
 
-    private LocalDateTime dateSuivi;        // Date et heure d’enregistrement
 }
+

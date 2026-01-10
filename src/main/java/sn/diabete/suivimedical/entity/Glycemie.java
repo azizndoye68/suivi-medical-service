@@ -5,15 +5,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "suivis")
+@Table(name = "glycemies")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Suivi {
+public class Glycemie {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
