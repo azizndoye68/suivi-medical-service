@@ -7,6 +7,7 @@ import sn.diabete.suivimedical.dto.GlycemieRequest;
 import sn.diabete.suivimedical.dto.GlycemieResponse;
 import sn.diabete.suivimedical.service.GlycemieService;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -63,6 +64,16 @@ public class GlycemieController {
     public ResponseEntity<List<GlycemieResponse>> getRecentSuivis(@RequestParam Long patientId) {
         List<GlycemieResponse> suivis = glycemieService.getRecentSuivisByPatientId(patientId);
         return ResponseEntity.ok(suivis);
+    }
+
+    @GetMapping("/patient/{patientId}/last-date")
+    public ResponseEntity<LocalDateTime> getLastMeasurementDate(@PathVariable Long patientId) {
+        try {
+            GlycemieResponse lastGlycemie = glycemieService.getLastSuiviByPatientId(patientId);
+            return ResponseEntity.ok(lastGlycemie.getDateSuivi());
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
     }
 
 }

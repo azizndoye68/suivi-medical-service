@@ -3,6 +3,8 @@ package sn.diabete.suivimedical.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import sn.diabete.suivimedical.enums.NiveauAlerte;
+import sn.diabete.suivimedical.enums.TypeAlerte;
 
 import java.time.LocalDateTime;
 
@@ -12,16 +14,14 @@ import java.time.LocalDateTime;
 public class GlycemieResponse {
 
     private Long id;
+    private Long patientId;
+    private Double glycemie;
+    private String moment;
+    private String repas;
+    private LocalDateTime dateSuivi;
 
-    private Long utilisateurId;
-
-    private Long patientId; // Référence vers le patient concerné
-
-    private Double glycemie;           // Taux de glycémie (g/l)
-
-    private String moment;             // Moment de la prise (avant_repas, apres_repas, etc.)
-
-    private String repas;              // Type de repas (petit_dejeuner, dejeuner, etc.)
-
-    private LocalDateTime dateSuivi;        // Date et heure d’enregistrement
+    // 🆕 Nouveaux champs
+    private NiveauAlerte niveauAlerte;
+    private TypeAlerte typeAlerte;
+    private Boolean evenementEnvoye;
 }

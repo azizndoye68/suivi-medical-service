@@ -6,8 +6,6 @@ import lombok.Data;
 @Data
 public class GlycemieRequest {
 
-    private Long utilisateurId;
-
     private Long patientId; // Référence vers le patient concerné
 
     private Double glycemie;           // Taux de glycémie (g/l)

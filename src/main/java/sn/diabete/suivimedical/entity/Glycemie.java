@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import sn.diabete.suivimedical.enums.NiveauAlerte;
+import sn.diabete.suivimedical.enums.TypeAlerte;
 
 import java.time.LocalDateTime;
 
@@ -18,17 +20,24 @@ public class Glycemie {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long utilisateurId;
+    private Long patientId;
 
-    private Long patientId; // Référence vers le patient concerné
+    private Double glycemie;
 
-    private Double glycemie;           // Taux de glycémie (g/l)
+    private String moment;
 
-    private String moment;             // Moment de la prise (avant_repas, apres_repas, etc.)
+    private String repas;
 
-    private String repas;              // Type de repas (petit_dejeuner, dejeuner, etc.)
+    private LocalDateTime dateSuivi;
 
-    private LocalDateTime dateSuivi;        // Date et heure d’enregistrement
+    // 🆕 Nouveaux champs pour l'analyse et les alertes
+    @Enumerated(EnumType.STRING)
+    private NiveauAlerte niveauAlerte;
+
+    @Enumerated(EnumType.STRING)
+    private TypeAlerte typeAlerte;
+
+    private Boolean evenementEnvoye = false;  // Indique si l'événement a été publié
 
     @PrePersist
     protected void onCreate() {
